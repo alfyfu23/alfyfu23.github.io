@@ -1,40 +1,28 @@
-- category: 语言
+- category: 编程语言
   items:
+    - C++
     - Python
-    - JavaScript
     - TypeScript
-    - Java
-    - Go
-    - SQL
+    - JavaScript
+    - SystemVerilog
 
-- category: 前端
+- category: 框架 & 工具
   items:
-    - React
     - Vue.js
-    - HTML/CSS
-    - Tailwind CSS
     - Next.js
-
-- category: 后端
-  items:
-    - Node.js
-    - Spring Boot
     - Django
-    - Flask
-    - Express
+    - Jekyll
 
-- category: 数据库
+- category: 课程方向
   items:
-    - PostgreSQL
-    - MySQL
-    - MongoDB
-    - Redis
+    - 数据结构与算法
+    - 计算机组成原理
+    - 软件工程
+    - 数字逻辑
 
 - category: 工具 & 平台
   items:
     - Git
-    - Docker
+    - GitHub
     - Linux
-    - GitHub Actions
-    - AWS
-    - Nginx
+    - VS Code
