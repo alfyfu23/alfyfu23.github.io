@@ -1,0 +1,54 @@
+lang: zh-CN
+timezone: Asia/Shanghai
+
+title: Alfyfu
+tagline: 清华大学计算机本科生
+description: >-
+  清华大学计算机科学与技术本科在读。个人主页 — 项目展示、技术博客。
+url: "https://alfyfu23.github.io"
+github:
+  username: alfyfu23
+
+theme: jekyll-theme-chirpy
+
+pagination:
+  enabled: true
+
+page_view_style: badge
+
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
+  - README.md
+  - LICENSE
+  - rollup.config.js
+  - package*.json
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/

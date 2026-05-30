@@ -1,0 +1,86 @@
+---
+layout: default
+ref: portfolio-home
+---
+
+<div class="portfolio-home">
+  <section class="hero">
+    <div class="hero-content">
+      <h1>{{ site.data.author.name | default: "Alfyfu" }}</h1>
+      <p class="hero-tagline">{{ site.data.author.tagline | default: "Developer" }}</p>
+      <p class="hero-desc">{{ site.description }}</p>
+      <div class="hero-links">
+        {% if site.data.contact.social.links %}
+          {% for link in site.data.contact.social.links %}
+          <a href="{{ link }}" class="btn btn-outline" target="_blank" rel="noopener">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          {% endfor %}
+        {% endif %}
+        <a href="{{ '/tabs/about/' | relative_url }}" class="btn btn-primary">关于我</a>
+        <a href="{{ '/tabs/archives/' | relative_url }}" class="btn btn-outline">博客文章</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section skills-section">
+    <h2 class="section-title"><i class="fas fa-code"></i> 技术栈</h2>
+    <div class="skills-grid">
+      {% for skill in site.data.skills %}
+      <div class="skill-category">
+        <h3>{{ skill.category }}</h3>
+        <div class="skill-tags">
+          {% for item in skill.items %}
+          <span class="skill-tag">{{ item }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="section projects-section">
+    <h2 class="section-title"><i class="fas fa-project-diagram"></i> 项目展示</h2>
+    <div class="projects-grid">
+      {% for project in site.data.projects %}
+      <div class="project-card">
+        <div class="project-header">
+          <h3>{{ project.name }}</h3>
+          {% if project.highlight %}
+          <span class="badge badge-primary">重点</span>
+          {% endif %}
+        </div>
+        <p class="project-desc">{{ project.description }}</p>
+        <div class="project-tech">
+          {% for tech in project.tech %}
+          <span class="tech-tag">{{ tech }}</span>
+          {% endfor %}
+        </div>
+        <div class="project-links">
+          {% if project.demo %}
+          <a href="{{ project.demo }}" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> 在线演示</a>
+          {% endif %}
+          {% if project.source %}
+          <a href="{{ project.source }}" target="_blank" rel="noopener"><i class="fab fa-github"></i> 源代码</a>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="section posts-section">
+    <h2 class="section-title"><i class="fas fa-pen-fancy"></i> 最近文章</h2>
+    <div class="posts-list">
+      {% assign posts = site.posts | limit: 3 %}
+      {% for post in posts %}
+      <article class="post-item">
+        <a href="{{ post.url | relative_url }}" class="post-title">{{ post.title }}</a>
+        <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+        <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 100 }}</p>
+      </article>
+      {% endfor %}
+    </div>
+    <a href="{{ '/tabs/archives/' | relative_url }}" class="view-all">查看全部文章 &rarr;</a>
+  </section>
+</div>

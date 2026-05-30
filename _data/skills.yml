@@ -1,0 +1,40 @@
+- category: 语言
+  items:
+    - Python
+    - JavaScript
+    - TypeScript
+    - Java
+    - Go
+    - SQL
+
+- category: 前端
+  items:
+    - React
+    - Vue.js
+    - HTML/CSS
+    - Tailwind CSS
+    - Next.js
+
+- category: 后端
+  items:
+    - Node.js
+    - Spring Boot
+    - Django
+    - Flask
+    - Express
+
+- category: 数据库
+  items:
+    - PostgreSQL
+    - MySQL
+    - MongoDB
+    - Redis
+
+- category: 工具 & 平台
+  items:
+    - Git
+    - Docker
+    - Linux
+    - GitHub Actions
+    - AWS
+    - Nginx

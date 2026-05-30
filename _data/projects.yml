@@ -1,0 +1,30 @@
+- name: 个人博客 & Portfolio
+  description: 基于 Jekyll + Chirpy 主题搭建的个人网站，集成博客和作品集展示功能，使用 GitHub Pages 部署，GitHub Actions 自动化构建。
+  tech:
+    - Jekyll
+    - Ruby
+    - HTML/CSS
+    - GitHub Actions
+  demo: https://alfyfu23.github.io
+  source: https://github.com/alfyfu23/alfyfu23.github.io
+  highlight: false
+
+- name: 示例项目一
+  description: 在这里描述你的项目。项目的主要功能、解决了什么问题、你的角色和贡献。请将此替换为你的真实项目。
+  tech:
+    - React
+    - Node.js
+    - MongoDB
+  demo:
+  source:
+  highlight: true
+
+- name: 示例项目二
+  description: 另一个项目描述。建议包含：项目背景、技术选型理由、核心难点和你的解决方案。
+  tech:
+    - Python
+    - Django
+    - PostgreSQL
+  demo:
+  source:
+  highlight: false
