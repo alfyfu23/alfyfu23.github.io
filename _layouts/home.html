@@ -72,8 +72,7 @@ ref: portfolio-home
   <section class="section posts-section">
     <h2 class="section-title"><i class="fas fa-pen-fancy"></i> 最近文章</h2>
     <div class="posts-list">
-      {% assign posts = site.posts | limit: 3 %}
-      {% for post in posts %}
+      {% for post in site.posts limit:3 %}
       <article class="post-item">
         <a href="{{ post.url | relative_url }}" class="post-title">{{ post.title }}</a>
         <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
