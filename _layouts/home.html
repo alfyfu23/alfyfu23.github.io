@@ -43,7 +43,7 @@ ref: portfolio-home
     <h2 class="section-title"><i class="fas fa-project-diagram"></i> 项目展示</h2>
     <div class="projects-grid">
       {% for project in site.data.projects %}
-      <div class="project-card">
+      <div class="project-card {% if project.highlight %}project-highlight{% endif %}">
         <div class="project-header">
           <h3>{{ project.name }}</h3>
           {% if project.highlight %}

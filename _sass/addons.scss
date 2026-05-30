@@ -131,6 +131,11 @@
   transform: translateY(-2px);
 }
 
+.project-highlight {
+  border-left: 4px solid var(--btn-bg, #2a6df4);
+  background: var(--tag-bg, #f8faff);
+}
+
 .project-header {
   display: flex;
   align-items: center;
