@@ -11,6 +11,10 @@ github:
 
 theme: jekyll-theme-chirpy
 
+search:
+  enabled: true
+  placeholder: 搜索文章...
+
 collections:
   tabs:
     output: true

@@ -1,0 +1,25 @@
+backend:
+  name: github
+  repo: alfyfu23/alfyfu23.github.io
+  branch: main
+  base_url: https://api.github.com
+
+media_folder: "assets/img/uploads"
+public_folder: "/assets/img/uploads"
+
+locale: "zh_Hans"
+
+collections:
+  - name: "posts"
+    label: "文章"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "作者", name: "author", widget: "string", default: "alfyfu"}
+      - {label: "日期", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss ZZ"}
+      - {label: "分类", name: "categories", widget: "list"}
+      - {label: "标签", name: "tags", widget: "list"}
+      - {label: "置顶", name: "pin", widget: "boolean", default: false}
+      - {label: "正文", name: "body", widget: "markdown"}
