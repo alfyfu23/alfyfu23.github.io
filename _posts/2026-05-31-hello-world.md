@@ -1,5 +1,6 @@
 ---
 title: Hello World — 博客开篇
+layout: post
 author: alfyfu
 date: 2026-05-31 12:00:00 +0800
 categories: [随想]

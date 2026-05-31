@@ -23,6 +23,11 @@ collections:
 defaults:
   - scope:
       path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
       type: tabs
     values:
       layout: page
