@@ -19,7 +19,7 @@ ref: portfolio-home
   font-weight: 700;
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #dee2e6;
+  border-bottom: 2px solid var(--main-border-color, #dee2e6);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -37,7 +37,7 @@ ref: portfolio-home
 
 .hero-tagline {
   font-size: 1.25rem;
-  color: #6c757d;
+  color: var(--text-muted-color, #6c757d);
   margin-bottom: 1rem;
 }
 
@@ -65,7 +65,7 @@ ref: portfolio-home
 }
 
 .hero-links .btn-primary {
-  background: #2a6df4;
+  background: var(--btn-bg, #2a6df4);
   color: #fff;
 }
 
@@ -74,14 +74,14 @@ ref: portfolio-home
 }
 
 .hero-links .btn-outline {
-  border: 1.5px solid #dee2e6;
-  color: #333;
+  border: 1.5px solid var(--main-border-color, #dee2e6);
+  color: var(--text-color, #333);
   background: transparent;
 }
 
 .hero-links .btn-outline:hover {
-  border-color: #2a6df4;
-  color: #2a6df4;
+  border-color: var(--btn-bg, #2a6df4);
+  color: var(--btn-bg, #2a6df4);
 }
 
 .skills-grid {
@@ -107,8 +107,8 @@ ref: portfolio-home
   padding: 0.2rem 0.6rem;
   border-radius: 4px;
   font-size: 0.8rem;
-  background: #f0f0f0;
-  color: #333;
+  background: var(--tag-bg, #f0f0f0);
+  color: var(--text-color, #333);
 }
 
 .projects-grid {
@@ -118,11 +118,11 @@ ref: portfolio-home
 }
 
 .project-card {
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--card-border-color, #e0e0e0);
   border-radius: 8px;
   padding: 1.25rem;
   transition: box-shadow 0.2s, transform 0.15s;
-  background: #fff;
+  background: var(--card-bg, #fff);
 }
 
 .project-card:hover {
@@ -131,8 +131,13 @@ ref: portfolio-home
 }
 
 .project-highlight {
-  border-left: 4px solid #2a6df4;
-  background: #f5f8ff;
+  border-left: 4px solid var(--btn-bg, #2a6df4);
+  background: var(--highlight-bg, #f5f8ff);
+}
+
+[data-mode="dark"] .project-highlight,
+html[data-mode="dark"] .project-highlight {
+  background: rgba(42, 109, 244, 0.1);
 }
 
 .project-header {
@@ -156,13 +161,13 @@ ref: portfolio-home
 }
 
 .badge-primary {
-  background: #2a6df4;
+  background: var(--btn-bg, #2a6df4);
   color: #fff;
 }
 
 .project-desc {
   font-size: 0.9rem;
-  color: #6c757d;
+  color: var(--text-muted-color, #6c757d);
   margin-bottom: 0.75rem;
   line-height: 1.5;
 }
@@ -178,8 +183,8 @@ ref: portfolio-home
   font-size: 0.75rem;
   padding: 0.15rem 0.5rem;
   border-radius: 3px;
-  background: #eef2f7;
-  color: #555;
+  background: var(--tag-bg, #eef2f7);
+  color: var(--text-muted-color, #555);
 }
 
 .project-links {
@@ -193,7 +198,7 @@ ref: portfolio-home
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
-  color: #2a6df4;
+  color: var(--btn-bg, #2a6df4);
 }
 
 .project-links a:hover {
@@ -208,7 +213,7 @@ ref: portfolio-home
 
 .post-item {
   padding-bottom: 1rem;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--main-border-color, #eee);
 }
 
 .post-item:last-child {
@@ -219,22 +224,22 @@ ref: portfolio-home
   font-size: 1.05rem;
   font-weight: 600;
   text-decoration: none;
-  color: #333;
+  color: var(--text-color, #333);
 }
 
 .post-title:hover {
-  color: #2a6df4;
+  color: var(--btn-bg, #2a6df4);
 }
 
 .post-date {
   font-size: 0.8rem;
-  color: #999;
+  color: var(--text-muted-color, #999);
   margin-left: 0.5rem;
 }
 
 .post-excerpt {
   font-size: 0.85rem;
-  color: #666;
+  color: var(--text-muted-color, #666);
   margin-top: 0.3rem;
   margin-bottom: 0;
 }
@@ -244,7 +249,7 @@ ref: portfolio-home
   margin-top: 1rem;
   font-size: 0.9rem;
   text-decoration: none;
-  color: #2a6df4;
+  color: var(--btn-bg, #2a6df4);
 }
 
 .view-all:hover {
@@ -278,8 +283,8 @@ ref: portfolio-home
           </a>
           {% endfor %}
         {% endif %}
-        <a href="{{ '/tabs/about/' | relative_url }}" class="btn btn-primary">关于我</a>
-        <a href="{{ '/tabs/archives/' | relative_url }}" class="btn btn-outline">博客文章</a>
+        <a href="{{ '/tabs/关于/' | relative_url }}" class="btn btn-primary">关于我</a>
+        <a href="{{ '/tabs/归档/' | relative_url }}" class="btn btn-outline">博客文章</a>
       </div>
     </div>
   </section>
@@ -341,6 +346,6 @@ ref: portfolio-home
       </article>
       {% endfor %}
     </div>
-    <a href="{{ '/tabs/archives/' | relative_url }}" class="view-all">查看全部文章 &rarr;</a>
+    <a href="{{ '/tabs/归档/' | relative_url }}" class="view-all">查看全部文章 &rarr;</a>
   </section>
 </div>

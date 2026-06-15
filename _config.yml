@@ -6,10 +6,18 @@ tagline: 清华大学计算机本科生
 description: >-
   清华大学计算机科学与技术本科在读。个人主页 — 项目展示、技术博客。
 url: "https://alfyfu23.github.io"
+avatar: /assets/img/avatar.jpg
 github:
   username: alfyfu23
 
 theme: jekyll-theme-chirpy
+
+comments:
+  active: utterances
+  utterances:
+    repo: alfyfu23/alfyfu23.github.io
+    issue-term: pathname
+    theme: github-light
 
 search:
   enabled: true
